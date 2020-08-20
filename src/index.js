@@ -13,5 +13,13 @@ class Chalkboard extends Component {
     //a different typle callback- defines the function in the variable itself
     //does not go back to a group of notes stored in an array
     //creates a one-line for each note string being stored
+    return (
+      <div className="App">
+        <div className="board">
+          <h1 className="chalk">{this.state.chalk} </h1>
+        </div>
+        <ul className="notes"> {notes} </ul>
+      </div>
+    );
   }
 }
