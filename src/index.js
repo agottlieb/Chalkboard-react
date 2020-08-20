@@ -8,6 +8,14 @@ class Chalkboard extends Component {
     notes: []
   };
 
+  updateChalk = (event) => {
+    this.setState({ chalk: event.target.value });
+  };
+
+  updateNotes = (event) => {
+    event.PreventDefault();
+    var newNotes = this.state.notes.slice();
+  };
   render() {
     var notes = this.state.notes.map((note) => <li> {note} </li>);
     //a different typle callback- defines the function in the variable itself
@@ -27,3 +35,5 @@ class Chalkboard extends Component {
     );
   }
 }
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Chalkboard />, rootElement);
