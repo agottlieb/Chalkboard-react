@@ -15,6 +15,10 @@ class Chalkboard extends Component {
     //creates a one-line for each note string being stored
     return (
       <div className="App">
+        <form>
+          <input type="text" placeholder="type here" value={this.state.chalk} />
+          <input type="submit" />
+        </form>
         <div className="board">
           <h1 className="chalk">{this.state.chalk} </h1>
         </div>
