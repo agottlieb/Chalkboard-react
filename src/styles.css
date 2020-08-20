@@ -1,0 +1,37 @@
+.App {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 5px;
+}
+
+.board {
+  background-color: darkgreen;
+  height: 150px;
+  border-bottom: 20px solid brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.chalk {
+  color: white;
+  opacity: 0.9;
+}
+
+.notes {
+  text-align: left;
+  border: 1px solid gray;
+  margin: 10px 50px;
+  padding: 50px 20px 10px 30px;
+}
+
+li {
+  border-bottom: 2px solid black;
+  padding: 5px 0 0;
+}
