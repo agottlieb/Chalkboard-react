@@ -7,11 +7,11 @@ class Chalkboard extends Component {
     chalk: "",
     notes: []
   };
-
+  //event handler for updating chalk
   updateChalk = (event) => {
     this.setState({ chalk: event.target.value });
   };
-  //update handler for typing
+  //update handler for update notes
   updateNotes = (event) => {
     //prevents refresh
     event.preventDefault();
