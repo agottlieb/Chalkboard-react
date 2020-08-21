@@ -32,8 +32,14 @@ class Chalkboard extends Component {
     //creates a one-line for each note string being stored
     return (
       <div className="App">
-        <form>
-          <input type="text" placeholder="type here" value={this.state.chalk} />
+        <form onSubmit={this.updateNotes}>
+          <input
+            type="text"
+            placeholder="type here"
+            value={this.state.chalk}
+            /*event listener for chalk section*/
+            onChange={this.updateChalk}
+          />
           <input type="submit" />
         </form>
         <div className="board">
