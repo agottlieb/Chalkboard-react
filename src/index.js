@@ -14,7 +14,7 @@ class Chalkboard extends Component {
 
   updateNotes = (event) => {
     //prevents refresh
-    event.PreventDefault();
+    event.preventDefault();
     //makes copy of current array
     var newNotes = this.state.notes.slice();
     //adds current chalk message to the notes
