@@ -13,8 +13,17 @@ class Chalkboard extends Component {
   };
 
   updateNotes = (event) => {
+    //prevents refresh
     event.PreventDefault();
+    //makes copy of current array
     var newNotes = this.state.notes.slice();
+    //adds current chalk message to the notes
+    newNotes.push(this.state.chalk);
+    //resets the chalk state to an empty field
+    this.setState({
+      chalk: "",
+      notes: newNotes
+    });
   };
   render() {
     var notes = this.state.notes.map((note) => <li> {note} </li>);
