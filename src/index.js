@@ -11,7 +11,7 @@ class Chalkboard extends Component {
   updateChalk = (event) => {
     this.setState({ chalk: event.target.value });
   };
-
+  //update handler for typing
   updateNotes = (event) => {
     //prevents refresh
     event.preventDefault();
