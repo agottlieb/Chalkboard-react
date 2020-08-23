@@ -25,11 +25,16 @@ class Chalkboard extends Component {
       notes: newNotes
     });
   };
+  //lifecyle update to save previous session to browser history
+  componentDidUpdate() {
+    var stateString = JSON.stringify(this.state);
+    localStorage.setItem("stateString", stateString);
+  }
   render() {
-    var notes = this.state.notes.map((note) => <li> {note} </li>);
-    //a different typle callback- defines the function in the variable itself
+    //a different type callback- defines the function in the variable itself
     //does not go back to a group of notes stored in an array
     //creates a one-line for each note string being stored
+    var notes = this.state.notes.map((note) => <li> {note} </li>);
     return (
       <div className="App">
         <form onSubmit={this.updateNotes}>
