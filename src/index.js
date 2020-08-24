@@ -25,9 +25,13 @@ class Chalkboard extends Component {
       notes: newNotes
     });
   };
-
+  //lifecyle to pull data from local storage
   componentDidMount() {
     var stateString = localStorage.getItem("stateString");
+    if (stateString) {
+      var savedState = JSON.parse(stateString);
+      this.setState(savedState);
+    }
   }
   //lifecyle update to save previous session to browser history
   componentDidUpdate() {
