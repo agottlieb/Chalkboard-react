@@ -38,6 +38,7 @@ class Chalkboard extends Component {
     var stateString = JSON.stringify(this.state);
     localStorage.setItem("stateString", stateString);
   }
+
   render() {
     //a different type callback- defines the function in the variable itself
     //does not go back to a group of notes stored in an array
